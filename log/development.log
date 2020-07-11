@@ -1533,3 +1533,226 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 176)
 
 
+Started GET "/users" for ::1 at 2020-07-11 11:43:48 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 14.0ms | Allocations: 6389)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:43:58 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running", "calories"=>200, "time"=>"300000", "weight"=>209, "id"=>"16", "user"=>{"name"=>"running", "calories"=>200, "time"=>"300000", "weight"=>209}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "time" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["time", 300000], ["updated_at", "2020-07-11 16:43:58.954485"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 30ms (Views: 0.6ms | ActiveRecord: 7.6ms | Allocations: 3794)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:44:05 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 975)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:50:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.7ms | Allocations: 1042)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:51:02 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running", "calories"=>"2000000", "time"=>300000, "weight"=>209, "id"=>"16", "user"=>{"name"=>"running", "calories"=>"2000000", "time"=>300000, "weight"=>209}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "calories" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["calories", 2000000], ["updated_at", "2020-07-11 16:51:02.656763"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 3.9ms | Allocations: 3207)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:51:04 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running", "calories"=>"2000000", "time"=>300000, "weight"=>209, "id"=>"16", "user"=>{"name"=>"running", "calories"=>"2000000", "time"=>300000, "weight"=>209}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 1.5ms | Allocations: 991)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:51:09 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 959)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:54:18 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 957)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:54:29 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running", "calories"=>"1", "time"=>"2", "weight"=>209, "id"=>"16", "user"=>{"name"=>"running", "calories"=>"1", "time"=>"2", "weight"=>209}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "calories" = $1, "time" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["calories", 1], ["time", 2], ["updated_at", "2020-07-11 16:54:29.796734"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 5.6ms | Allocations: 3170)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:55:21 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 958)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:55:43 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running and walking", "calories"=>1, "time"=>2, "weight"=>209, "id"=>"16", "user"=>{"name"=>"running and walking", "calories"=>1, "time"=>2, "weight"=>209}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "running and walking"], ["updated_at", "2020-07-11 16:55:43.744219"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 6.1ms | Allocations: 3157)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:55:47 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.9ms | Allocations: 957)
+
+
+Started GET "/users" for ::1 at 2020-07-11 11:59:08 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 957)
+
+
+Started PUT "/users/16" for ::1 at 2020-07-11 11:59:27 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"running and walking", "calories"=>1, "time"=>"20000", "weight"=>209, "id"=>"16", "user"=>{"name"=>"running and walking", "calories"=>1, "time"=>"20000", "weight"=>209}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "time" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["time", 20000], ["updated_at", "2020-07-11 16:59:27.173675"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Started GET "/users" for ::1 at 2020-07-11 11:59:27 -0500
+  [1m[35m (50.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 62ms (Views: 0.4ms | ActiveRecord: 51.4ms | Allocations: 5407)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 1030)
+
+
+Started GET "/users" for ::1 at 2020-07-11 12:01:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.2ms | Allocations: 957)
+
+
+Started POST "/users" for ::1 at 2020-07-11 12:01:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"test to delete", "calories"=>"400", "time"=>"27", "weight"=>"209", "user"=>{"name"=>"test to delete", "calories"=>"400", "time"=>"27", "weight"=>"209"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "calories", "time", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test to delete"], ["calories", 400], ["time", 27], ["weight", 209], ["created_at", "2020-07-11 17:01:35.674918"], ["updated_at", "2020-07-11 17:01:35.674918"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 38ms (Views: 0.7ms | ActiveRecord: 29.4ms | Allocations: 2705)
+
+
+Started GET "/users" for ::1 at 2020-07-11 12:01:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1082)
+
+
+Started GET "/users" for ::1 at 2020-07-11 12:01:53 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1082)
+
+
+Started GET "/users/16" for ::1 at 2020-07-11 12:01:57 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 788)
+
+
+Started DELETE "/users/16" for ::1 at 2020-07-11 12:02:02 -0500
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 5.7ms | Allocations: 2464)
+
+
+Started GET "/users" for ::1 at 2020-07-11 12:02:02 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 957)
+
+
+Started POST "/users" for ::1 at 2020-07-11 12:02:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"New exercise", "calories"=>"50", "time"=>"20", "weight"=>"200", "user"=>{"name"=>"New exercise", "calories"=>"50", "time"=>"20", "weight"=>"200"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "calories", "time", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New exercise"], ["calories", 50], ["time", 20], ["weight", 200], ["created_at", "2020-07-11 17:02:19.709434"], ["updated_at", "2020-07-11 17:02:19.709434"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 0.6ms | ActiveRecord: 2.9ms | Allocations: 2619)
+
+
+Started GET "/users" for ::1 at 2020-07-11 12:02:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1082)
+
+
